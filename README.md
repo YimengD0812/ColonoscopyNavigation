@@ -17,7 +17,14 @@ To address the complexity and variability of the gastrointestinal environment, w
 
 ![Pipeline Diagram](img/pipeline.jpg)
 
+#### Dark Region Method 
+For images routed to the dark region method, we assume that the forward direction corresponds to the darkest area within the lumen. The process begins by enhancing contrast using the red channel of the RGB image, which is particularly effective in colonoscopy for highlighting light and dark regions. Noise is reduced using Gaussian and median filters. The image is then downsampled by 50% and converted to grayscale to reduce computational cost. A histogram-based analysis identifies a valley point to separate bright (non-lumen) and dark (lumen) areas, followed by adaptive thresholding to create a binary image—dark regions are marked as lumen, bright as wall. Morphological operations (e.g., closing, denoising, edge smoothing) refine the segmentation. Contours are extracted using methods like OpenCV’s findContours, then smoothed (e.g., with spline interpolation) to define lumen boundaries. Finally, the contours are overlaid on the original image to verify accuracy and guide forward direction estimation.
 
+#### Haustral Folds Method
+Haustral Fold-Based Method
+This method targets images with visible haustral folds to estimate the lumen center through shape-based analysis. First, each 640×480 colonoscopy image undergoes grayscale conversion, followed by Contrast Limited Adaptive Histogram Equalization (CLAHE) over 12×12 tiles to enhance contrast, and Gaussian filtering to smooth noise. Next, Canny edge detection is applied to identify haustral fold contours (O-rings), using relaxed parameters to maximize detection. Small fragments below a preset pixel threshold (e.g., 500 pixels) are discarded to filter out noise. The remaining fold segments are individually labeled with IDs and pixel data, allowing for multiple candidates in a single frame. Each segment is then evaluated for ellipse fitting; those failing to form valid ellipses are excluded. Finally, the centroid of the fitted ellipse is calculated and used as the predicted lumen center for navigation guidance.
+
+### Deep Learning Imrovement
 
 
 
