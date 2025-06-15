@@ -15,6 +15,9 @@ Overall, a robust navigation algorithm must adapt to highly variable anatomical 
 ### Our Method
 To address the complexity and variability of the gastrointestinal environment, we propose a navigation method that predicts the insertion direction by combining lumen image classification with both dark-region analysis and haustral fold-based tracking. Our system consists of three key components: a lumen image classifier, a dark-region-based lumen center estimator, and a fold-based lumen tracking algorithm. The process begins by classifying each frame into two categories based on visual features: images with clear haustral folds are routed to the fold-based algorithm, while those showing ambiguous or poorly structured regions (e.g., sharp turns or occlusions) are processed using the dark-region method. This adaptive framework allows the system to select the most suitable strategy based on the current visual context, improving the accuracy and robustness of lumen center detection and forward direction prediction during colonoscope insertion.
 
+![Pipeline Diagram](img/pipeline.jpg)
+
+
 
 
 
