@@ -36,6 +36,11 @@ Haustral Fold-Based Method
 This method targets images with visible haustral folds to estimate the lumen center through shape-based analysis. First, each 640×480 colonoscopy image undergoes grayscale conversion, followed by Contrast Limited Adaptive Histogram Equalization (CLAHE) over 12×12 tiles to enhance contrast, and Gaussian filtering to smooth noise. Next, Canny edge detection is applied to identify haustral fold contours (O-rings), using relaxed parameters to maximize detection. Small fragments below a preset pixel threshold (e.g., 500 pixels) are discarded to filter out noise. The remaining fold segments are individually labeled with IDs and pixel data, allowing for multiple candidates in a single frame. Each segment is then evaluated for ellipse fitting; those failing to form valid ellipses are excluded. Finally, the centroid of the fitted ellipse is calculated and used as the predicted lumen center for navigation guidance.
 
 ### Deep Learning Imrovement
+The current deep learning models and related papers on medical image segmentation and edge recognition are collected and organized, and the applicability of the related models in edge detection and closed structure extraction is preliminarily evaluated. The U-Net++, 
+DexiNed, and FodIt models are selected for experiments on the dataset. Attempts were made to use the FoldIT model for virtual colonoscopy image generation and automatic labeling of folded rings on the wrinkle dataset, and ellipse fitting and finding the center of gravity mass point on the generated virtual colonoscopy images using the fold wrinkle method.
+
+Translated with DeepL.com (free version)
+
 
 
 
