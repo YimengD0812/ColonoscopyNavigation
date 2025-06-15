@@ -26,6 +26,8 @@ Preliminary preprocessing was performed on the provided colonoscopy video data. 
 The dark-region method was applied to automatically estimate the lumen center in each frame.
 This method performed well in regions with clear tissue structures and strong light–dark contrast, but its performance was limited in areas filled with fluid or lacking sufficient contrast between the lumen and colon wall.
 Further optimization of the estimation process awaits feedback from clinical experts.
+![Pipeline Diagram](img/vc2.jpg)
+![Pipeline Diagram](img/vc1.jpg)
 
 
 
