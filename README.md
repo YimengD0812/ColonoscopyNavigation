@@ -40,10 +40,3 @@ The current deep learning models and related papers on medical image segmentatio
 
 
 
-
-
-#### Reference Paper
-1.https://arxiv.org/pdf/1807.10165
-
-
-### DataSets 
