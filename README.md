@@ -1,6 +1,6 @@
 # AI-Assisted Colonoscopy Navigation — Predicting Insertion Direction
 ### Current Progress Report
-[![PDF Preview](/images/pdf_preview.png)](https://github.com/YimengD0812/ColonoscopyNavigation/blob/main/Navigation.pdf)
+The current report can be found in https://drive.google.com/file/d/1emgNXSRn9dmpFxWhHcJ11_qwxPrjEhHc/view?usp=sharing
 
 
 
